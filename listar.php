@@ -14,10 +14,10 @@
     <nav>
 
 <ul> 
-    <li><a href="http://localhost/CursoCelke/CRUD_PHP_MYSQLI/index.html">HOME</a></li> 
-    <li><a href="http://localhost/CursoCelke/CRUD_PHP_MYSQLI/cadastrar.php">CADASTRAR</a></li> 
-    <li><a href="http://localhost/CursoCelke/CRUD_PHP_MYSQLI/listar.php">LISTAR</a></li> 
-    <li><a href="http://localhost/CursoCelke/CRUD_PHP_MYSQLI/deletar.php">DELETAR</a></li>
+    <li><a href="http://localhost/MeusProjetos/CursoCelke/Crud-PHP-Mysqli/index.html">HOME</a></li> 
+    <li><a href="http://localhost/MeusProjetos/CursoCelke/Crud-PHP-Mysqli/cadastrar.php">CADASTRAR</a></li> 
+    <li><a href="http://localhost/MeusProjetos/CursoCelke/Crud-PHP-Mysqli/listar.php">LISTAR</a></li> 
+    <li><a href="http://localhost/MeusProjetos/CursoCelke/Crud-PHP-Mysqli/deletar.php">DELETAR</a></li>
 
 </ul>
 
