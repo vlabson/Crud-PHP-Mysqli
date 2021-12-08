@@ -11,19 +11,18 @@
     </head>
     <body>
 
-    <nav>
+        <nav>
 
-    <ul> 
-            <li><a href="http://localhost/MeusProjetos/CursoCelke/Crud-PHP-Mysqli/index.html">HOME</a></li> 
-            <li><a href="http://localhost/MeusProjetos/CursoCelke/Crud-PHP-Mysqli/cad_usuario.php">CADASTRAR</a></li> 
-            <li><a href="http://localhost/MeusProjetos/CursoCelke/Crud-PHP-Mysqli/listar.php">LISTAR</a></li> 
-            <li><a href="http://localhost/MeusProjetos/CursoCelke/Crud-PHP-Mysqli/deletar.php">DELETAR</a></li>
+            <ul> 
+                    <li><a href="http://localhost/MeusProjetos/CursoCelke/Crud-PHP-Mysqli/index.html">HOME</a></li> 
+                    <li><a href="http://localhost/MeusProjetos/CursoCelke/Crud-PHP-Mysqli/cadastrar.php">CADASTRAR</a></li> 
+                    <li><a href="http://localhost/MeusProjetos/CursoCelke/Crud-PHP-Mysqli/listar.php">LISTAR</a></li> 
+            </ul>
 
-    </ul>
-
-</nav>
+        </nav>
 
         <h1>Listar Usuário</h1>
+        
         <?php
            if(isset( $_SESSION['msg'])){
                 echo  $_SESSION['msg'];
@@ -50,7 +49,8 @@
                 echo "Id : " . $row_usuario['id'] . "</br>";
                 echo "Nome : " . $row_usuario['nome'] . "</br>";
                 echo "E-mail : " . $row_usuario['email'] . "</br>";
-                echo "<a href='edit_usuario.php?id=". $row_usuario['id'] . "'>Editar</a></br><hr>";
+                echo "<a href='edit_usuario.php?id=". $row_usuario['id'] . "'>Editar</a>";
+                echo "<a href='del_usuario.php?id=". $row_usuario['id'] . "'>Deletar</a></br><hr>";
             }
 
             //____________________________________ paginação _____________________________________________
