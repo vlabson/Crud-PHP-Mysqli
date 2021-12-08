@@ -1,7 +1,10 @@
 <?php
     session_start();
     include_once("conexao.php");
-    $result_usuario = "SELECT * FROM usuarios where id = '2'";
+
+    //Recebe o id, nome e email digitado pelo usuario por meio do method post e armazena nas variaveis
+    $id = $_GET["id"];
+    $result_usuario = "SELECT * FROM usuarios where id = '$id'";
     $resultado_usuario = mysqli_query($conn,$result_usuario);
     $row_usuario = mysqli_fetch_assoc($resultado_usuario);
 ?>
