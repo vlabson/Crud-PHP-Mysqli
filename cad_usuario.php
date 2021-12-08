@@ -15,7 +15,7 @@
 
         <ul> 
             <li><a href="http://localhost/MeusProjetos/CursoCelke/Crud-PHP-Mysqli/index.html">HOME</a></li> 
-            <li><a href="http://localhost/MeusProjetos/CursoCelke/Crud-PHP-Mysqli/cadastrar.php">CADASTRAR</a></li> 
+            <li><a href="http://localhost/MeusProjetos/CursoCelke/Crud-PHP-Mysqli/cad_usuario.php">CADASTRAR</a></li> 
             <li><a href="http://localhost/MeusProjetos/CursoCelke/Crud-PHP-Mysqli/listar.php">LISTAR</a></li> 
             <li><a href="http://localhost/MeusProjetos/CursoCelke/Crud-PHP-Mysqli/deletar.php">DELETAR</a></li>
 
@@ -30,7 +30,7 @@
             }
         ?>
 
-        <form method="POST" action="processa.php">
+        <form method="POST" action="proc_cad_usuario.php">
             <label>Nome:</label>
             <input type="text" name="nome" placeholder="Digite aqui seu nome completo!"><br><br>
             <label>Email:</label>
