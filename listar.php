@@ -13,13 +13,13 @@
 
     <nav>
 
-<ul> 
-    <li><a href="http://localhost/MeusProjetos/CursoCelke/Crud-PHP-Mysqli/index.html">HOME</a></li> 
-    <li><a href="http://localhost/MeusProjetos/CursoCelke/Crud-PHP-Mysqli/cadastrar.php">CADASTRAR</a></li> 
-    <li><a href="http://localhost/MeusProjetos/CursoCelke/Crud-PHP-Mysqli/listar.php">LISTAR</a></li> 
-    <li><a href="http://localhost/MeusProjetos/CursoCelke/Crud-PHP-Mysqli/deletar.php">DELETAR</a></li>
+    <ul> 
+            <li><a href="http://localhost/MeusProjetos/CursoCelke/Crud-PHP-Mysqli/index.html">HOME</a></li> 
+            <li><a href="http://localhost/MeusProjetos/CursoCelke/Crud-PHP-Mysqli/cad_usuario.php">CADASTRAR</a></li> 
+            <li><a href="http://localhost/MeusProjetos/CursoCelke/Crud-PHP-Mysqli/listar.php">LISTAR</a></li> 
+            <li><a href="http://localhost/MeusProjetos/CursoCelke/Crud-PHP-Mysqli/deletar.php">DELETAR</a></li>
 
-</ul>
+    </ul>
 
 </nav>
 
@@ -36,7 +36,7 @@
             $pagina = (!empty($pagina_atual)) ? $pagina_atual : 1;
 
             //setar a quantidade de itens por pagina
-            $qnt_result_pg = 2;
+            $qnt_result_pg = 3;
 
             //realiza um calculo para identificar quais item seram mostrados na pagina 
             $inicio = ($qnt_result_pg * $pagina) - $qnt_result_pg;
@@ -45,12 +45,15 @@
             $result_usuarios = "SELECT * FROM usuarios LIMIT $inicio, $qnt_result_pg";
             $resultado_usuarios = mysqli_query($conn, $result_usuarios);
 
-            // mostra o resultado na tela
+            // imprime na tela os usuarios da consulta  
             while($row_usuario = mysqli_fetch_assoc($resultado_usuarios)){
                 echo "Id : " . $row_usuario['id'] . "</br>";
                 echo "Nome : " . $row_usuario['nome'] . "</br>";
-                echo "E-mail : " . $row_usuario['email'] . "</br><hr>";
+                echo "E-mail : " . $row_usuario['email'] . "</br>";
+                echo "<a href='edit_usuario.php?id=". $row_usuario['id'] . "'>Editar</a></br><hr>";
             }
+
+            //____________________________________ paginação _____________________________________________
 
             //realiza o calculo da paginação ( somar a quantidade de usuarios e registros de linha no banco )
             $result_pg = "SELECT COUNT(id) AS num_result FROM usuarios";
@@ -65,7 +68,8 @@
             // limitar qauntidades de links antes e depois da pagina atual 
             $max_links = 2;
 
-            //exibe na tela paginação 
+            //exibe na tela paginação
+
             echo "<a href = 'listar.php?pagina=1'> Primeira </a>";
 
             
