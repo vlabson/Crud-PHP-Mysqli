@@ -27,7 +27,7 @@ $resultado_usuario = mysqli_query($conn, $result_usuario);
 // para verificar se o UPDATE foi realizado com sucesso utilizasse o mysqli_affected_rows
 if(mysqli_affected_rows($conn)){
     $_SESSION['msg'] = "<p style='color:green;'>Usuário editado com Sucesso!!</p>";
-    header("location: listar.php");
+    header("location: listar.php?id=$id");
 }else{
     $_SESSION['msg'] = "<p style='color:red;'>Usuário não foi editado com Sucesso!!</p>";
     header("location: edit_usuario.php?id=$id");
