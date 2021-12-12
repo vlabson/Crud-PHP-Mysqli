@@ -13,7 +13,7 @@ echo "Email : $email <br>";
 */
 
 // aqui verifico se o ID não é NULL ou VAZIO
-if(!empty($id){
+if(!empty($id)){
    
     //Cria uma query DELETE ( para deletar ) a mesma ja recebe os valores e armazena a query na variavel assim de otmizar codigos
     $result_usuario = "DELETE FROM usuarios where id = '$id'";
