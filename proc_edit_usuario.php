@@ -3,7 +3,7 @@ session_start();//inicializa uma secao
 include_once("conexao.php"); //inclue apenas uma vez ( include_once ) dentro desta linha de codigo a conexao.php
 
 
-//Recebe o id, nome e email digitado pelo usuario por meio do method post e armazena nas variaveis
+//Recebe o id, nome e email digitado pelo usuario por meio do method post e armazena nas variaveis!
 $id = $_POST["id"];
 $nome = $_POST["nome"];
 $email = $_POST["email"];
